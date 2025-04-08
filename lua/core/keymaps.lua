@@ -147,6 +147,9 @@ function M.setup()
     -- Buffer commits
     map("n", "<leader>gcb", "<cmd>Telescope git_bcommits<cr>", "Buffer")
 
+    -- Create commit
+    map("n", "<leader>gcc", "<cmd>Git commit<cr>", "Create")
+
     -- Project commits
     map("n", "<leader>gcp", "<cmd>Telescope git_commits<cr>", "Project")
 
