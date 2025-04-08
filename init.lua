@@ -1,0 +1,6 @@
+require("core.bootstrap").setup()
+require("core.keymaps").setup()
+require("lazy").setup("plugins")
+require("core.options").setup()
+require("core.autocmds").setup()
+require("core.commands").setup()
