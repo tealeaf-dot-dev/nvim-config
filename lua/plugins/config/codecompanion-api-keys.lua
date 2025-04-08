@@ -11,7 +11,7 @@ local ok, secrets = pcall(require, "secrets")
 local notify = require("notify")
 
 if ok then
-    for k, v in pairs(secrets.api_keys) do
+    for k, v in pairs(secrets.ai_api_keys) do
         api_keys[k] = v
     end
 else

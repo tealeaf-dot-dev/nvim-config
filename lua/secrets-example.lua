@@ -4,7 +4,7 @@
 -- To use, and copy or rename to secrets.lua
 
 return {
-    api_keys = {
+    ai_api_keys = {
         openai = "",
         anthropic = "",
         deepseek = "",
