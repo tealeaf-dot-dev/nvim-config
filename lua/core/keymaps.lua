@@ -163,10 +163,7 @@ function M.setup()
     map("n", "<leader>gll", "<cmd>Gitsigns blame_line<CR>", "Line")
 
     -- Push
-    map("n", "<leader>gp", function()
-        vim.notify("Git push in progress...", "info", { title = "Git" })
-        vim.cmd("Git push")
-    end, "Push")
+    map("n", "<leader>gp", "<cmd>Git push<CR>", "Push")
 
     -- Stash
     map("n", "<leader>gs", "<cmd>Telescope git_stash<cr>", "Stash")
