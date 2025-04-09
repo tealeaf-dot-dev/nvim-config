@@ -205,6 +205,9 @@ function M.setup()
 
     -- -------- AI --------
 
+    -- CodeCompanion include
+    map({ "v" }, "<leader>ac+", "<cmd>CodeCompanionChat Add<CR>", "Add")
+
     -- CodeCompanion actions
     map({ "n", "v" }, "<leader>aca", "<cmd>CodeCompanionActions<CR>", "Actions")
 
@@ -212,16 +215,13 @@ function M.setup()
     map({ "n", "v" }, "<leader>acc", "<cmd>CodeCompanionChat<CR>", "Chat")
 
     -- CodeCompanion prompt
-    map({ "n", "v" }, "<leader>acp", feedkeys(":CodeCompanion "), "Prompt")
+    map({ "n", "v" }, "<leader>aci", feedkeys(":CodeCompanion "), "Inline")
 
     -- CodeCompanion quick chat
     map({ "n", "v" }, "<leader>acq", feedkeys(":CodeCompanionChat "), "Quick Chat")
 
     -- CodeCompanion toggle chat
     map({ "n", "v" }, "<leader>act", "<cmd>CodeCompanionChat Toggle<CR>", "Toggle Chat")
-
-    -- CodeCompanion include
-    map({ "v" }, "<leader>aci", "<cmd>CodeCompanionChat Add<CR>", "Include")
 
 
 
