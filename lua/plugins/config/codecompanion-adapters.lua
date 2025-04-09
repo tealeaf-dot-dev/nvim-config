@@ -171,7 +171,7 @@ M.openrouter_gemini25pro = function()
         },
         schema = {
             model = {
-                default = "google/gemini-2.5-pro-exp-03-25:free",
+                default = "google/gemini-2.5-pro-preview-03-25",
             },
         },
     })
