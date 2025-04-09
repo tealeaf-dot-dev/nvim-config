@@ -9,3 +9,4 @@ Copy `~/.config/nvim/lua/secrets-example.lua` to `~/.config/nvim/lua/secrets.lua
 Run `nvim` to install.
 
 # test
+# test
