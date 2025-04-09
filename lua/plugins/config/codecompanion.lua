@@ -17,7 +17,7 @@ return function()
             o3mini = adapters.o3mini,
             o3minithinking = adapters.o3minithinking,
             o3minithinkingharder = adapters.o3minithinkingharder,
-            openrouter_gemini25proexperimentalfree = adapters.openrouter_gemini25proexperimentalfree,
+            openrouter_gemini25pro = adapters.openrouter_gemini25pro,
             perplexity = adapters.perplexity,
         },
         strategies = {

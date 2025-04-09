@@ -160,7 +160,7 @@ M.hyperbolicdeepseekr1 = function()
     })
 end
 
-M.openrouter_gemini25proexperimentalfree = function()
+M.openrouter_gemini25pro = function()
     return require("codecompanion.adapters").extend("openai_compatible", {
         name = "Gemini 2.5 Pro",
         formatted_name = "Gemini 2.5 Pro",
