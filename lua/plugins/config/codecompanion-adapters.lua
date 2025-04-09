@@ -180,6 +180,26 @@ M.openrouter_gemini25pro = function()
     })
 end
 
+M.openrouter_quasaralpha = function()
+    return require("codecompanion.adapters").extend("openai_compatible", {
+        name = "Quasar Alpha",
+        formatted_name = "Quasar Alpha",
+        env = {
+            url = "https://openrouter.ai/api",
+            api_key = api_keys.openrouter,
+            chat_url = "/v1/chat/completions",
+        },
+        schema = {
+            model = {
+                default = "openrouter/quasar-alpha",
+                choices = {
+                    "openrouter/quasar-alpha",
+                },
+            },
+        },
+    })
+end
+
 M.perplexity = function()
     return require("codecompanion.adapters").extend("openai_compatible", {
         name = "Perplexity",

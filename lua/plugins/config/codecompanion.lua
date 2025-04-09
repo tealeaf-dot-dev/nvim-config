@@ -18,6 +18,7 @@ return function()
             o3minithinking = adapters.o3minithinking,
             o3minithinkingharder = adapters.o3minithinkingharder,
             openrouter_gemini25pro = adapters.openrouter_gemini25pro,
+            openrouter_quasaralpha = adapters.openrouter_quasaralpha,
             perplexity = adapters.perplexity,
         },
         strategies = {
