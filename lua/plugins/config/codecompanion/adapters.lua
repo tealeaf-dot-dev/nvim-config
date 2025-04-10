@@ -94,6 +94,24 @@ M.gpt4o = function()
     })
 end
 
+M.claude35 = function()
+    return require("codecompanion.adapters").extend("anthropic", {
+        name = "Claude 3.5",
+        formatted_name = "Claude 3.5",
+        env = {
+            api_key = api_keys.anthropic,
+        },
+        schema = {
+            model = {
+                default = "claude-3-5-sonnet-latest",
+                choices = {
+                    "claude-3-5-sonnet-latest",
+                },
+            },
+        },
+    })
+end
+
 M.claude37 = function()
     return require("codecompanion.adapters").extend("anthropic", {
         name = "Claude 3.7",

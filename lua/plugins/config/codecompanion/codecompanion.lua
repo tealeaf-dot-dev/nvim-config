@@ -13,6 +13,7 @@ return function()
             end,
         },
         adapters = {
+            claude35 = adapters.claude35,
             claude37 = adapters.claude37,
             claude37thinking = adapters.claude37thinking,
             deepseek = adapters.deepseek,
