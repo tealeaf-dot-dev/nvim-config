@@ -266,7 +266,7 @@ return {
     {
         "olimorris/codecompanion.nvim",
         config = function()
-            require("plugins.config.codecompanion")()
+            require("plugins.config.codecompanion.codecompanion")()
         end,
         dependencies = {
             "nvim-lua/plenary.nvim",

@@ -1,11 +1,16 @@
 -- plugins/config/codecompanion.lua
 
-local adapters = require("plugins.config.codecompanion-adapters")
+local adapters = require("plugins.config.codecompanion.adapters")
+local system_prompt = require("plugins.config.codecompanion.system-prompts.codecompanion-plus-claude-plus-cursor-tools")
 
 return function()
     require("codecompanion").setup({
         opts = {
             log_level = "TRACE", -- "TRACE" or "DEBUG"
+            system_prompt = function(opts)
+                local language = opts.language or "English"
+                return string.format(system_prompt, language)
+            end,
         },
         adapters = {
             claude37 = adapters.claude37,
@@ -28,6 +33,13 @@ return function()
                     llm = function(adapter)
                         return adapter.formatted_name
                     end,
+                },
+                tools = {
+                    ["cmd_runner"] = {
+                        opts = {
+                            requires_approval = false,
+                        },
+                    },
                 },
                 slash_commands = {
                     ["file"] = {

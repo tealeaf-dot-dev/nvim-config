@@ -1,4 +1,4 @@
-local api_keys = require("plugins.config.codecompanion-api-keys")
+local api_keys = require("plugins.config.codecompanion.api-keys")
 local M = {}
 
 M.o3mini = function()
