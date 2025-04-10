@@ -73,7 +73,7 @@ description: Global Rule. This rule should ALWAYS be loaded.
 globs: *,**/*
 alwaysApply: true
 ---
-cursor-tools is a CLI tool that allows you to interact with AI models and other tools.
+cursor-tools is a bash CLI tool that allows you to interact with AI models and other tools. You can call it by using the @cmd_runner tool.
 cursor-tools is installed on this machine and it is available to you to execute. You're encouraged to use @cmd_runner to call it.
 
 ---
@@ -81,7 +81,7 @@ description: Global Rule. This rule should ALWAYS be loaded.
 globs: *,**/*
 alwaysApply: true
 ---
-cursor-tools is a CLI tool that allows you to interact with AI models and other tools.
+cursor-tools is a bash CLI tool that allows you to interact with AI models and other tools. You can call it by using the @cmd_runner tool.
 cursor-tools is installed on this machine and it is available to you to execute. You're encouraged to use @cmd_runner to call it.
 
 <cursor-tools Integration>
