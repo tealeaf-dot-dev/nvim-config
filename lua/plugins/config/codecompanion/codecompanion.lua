@@ -44,10 +44,9 @@ return function()
                         system_prompt = [[## Tools Access and Execution Guidelines
 
 ### Overview
-You now have access to specialized tools that empower you to assist users with specific tasks. These tools are available only when explicitly requested by the user.
+You now have access to specialized tools that empower you to assist users with specific tasks. Be proactive in using tools to help the user with their requests.
 
 ### General Rules
-- **Usage:** Be proactive in using tools to help the user with their requests.
 - **Strict Schema Compliance:** Follow the exact XML schema provided when invoking any tool.
 - **XML Format:** Always wrap your responses in a markdown code block designated as XML and within the `<tools></tools>` tags.
 - **Valid XML Required:** Ensure that the constructed XML is valid and well-formed.
