@@ -50,6 +50,9 @@ function M.setup()
     -- Find file in project
     map("n", "<leader>p", "<cmd>Telescope git_files<cr>", "Files")
 
+    -- Find pattern
+    map("n", "<leader>fp", "<cmd>Telescope live_grep<cr>", "Pattern" )
+
     -- Leap forward
     map({'n', 'x', 'o'}, '}',  '<Plug>(leap-forward)', "Leap forward")
 
