@@ -8,4 +8,5 @@ return function()
     lspconfig.lua_ls.setup {}
     lspconfig.eslint.setup {}
     lspconfig.twiggy_language_server.setup {}
+    lspconfig.volar.setup {}
 end
