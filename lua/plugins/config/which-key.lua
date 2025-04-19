@@ -32,6 +32,7 @@ return function()
         { "<leader>gdh", group = "History", mode = { "n", "v" } },
         { "<leader>gdp", group = "Project", mode = { "n", "v" } },
         { "<leader>gl", group = "Blame", mode = { "n", "v" } },
+        { "<leader>gr", group = "Remote", mode = { "n", "v" } },
         { "<leader>h", group = "Hunks", mode = { "n", "v" } },
         { "<leader>i", group = "LSP", mode = { "n", "v" } },
         { "<leader>id", group = "Diagnostics", mode = { "n", "v" } },

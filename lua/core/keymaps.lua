@@ -163,7 +163,13 @@ function M.setup()
     map("n", "<leader>gll", "<cmd>Gitsigns blame_line<CR>", "Line")
 
     -- Push
-    map("n", "<leader>gp", "<cmd>Git push<CR>", "Push")
+    map("n", "<leader>grp", "<cmd>Git push<CR>", "Push")
+
+    -- Pull
+    map("n", "<leader>grP", "<cmd>Git pull<CR>", "Pull")
+
+    -- Fetch
+    map("n", "<leader>grf", "<cmd>Git fetch<CR>", "Fetch")
 
     -- Stash
     map("n", "<leader>gs", "<cmd>Telescope git_stash<cr>", "Stash")
