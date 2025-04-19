@@ -32,7 +32,7 @@ return function()
         },
         strategies = {
             chat = {
-                adapter = "claude37",
+                adapter = "gpt41",
                 roles = {
                     llm = function(adapter)
                         return adapter.formatted_name
@@ -91,7 +91,7 @@ You now have access to specialized tools that empower you to assist users with s
                 },
             },
             inline = {
-                adapter = "claude37",
+                adapter = "gpt41",
             },
         },
     })
