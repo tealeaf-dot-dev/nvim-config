@@ -58,6 +58,24 @@ M.o3minithinkingharder = function()
     })
 end
 
+M.o3 = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "o3",
+        formatted_name = "o3",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "o3",
+                choices = {
+                    "o3",
+                },
+            },
+        },
+    })
+end
+
 M.o4mini = function()
     return require("codecompanion.adapters").extend("openai", {
         name = "o4 mini",

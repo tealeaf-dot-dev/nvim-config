@@ -24,6 +24,7 @@ return function()
             o3mini = adapters.o3mini,
             o3minithinking = adapters.o3minithinking,
             o3minithinkingharder = adapters.o3minithinkingharder,
+            o3 = adapters.o3,
             o4mini = adapters.o4mini,
             o4minihigh = adapters.o4minihigh,
             openrouter_gemini25pro = adapters.openrouter_gemini25pro,
