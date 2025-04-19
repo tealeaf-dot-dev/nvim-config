@@ -28,7 +28,6 @@ return function()
             o4mini = adapters.o4mini,
             o4minihigh = adapters.o4minihigh,
             openrouter_gemini25pro = adapters.openrouter_gemini25pro,
-            openrouter_quasaralpha = adapters.openrouter_quasaralpha,
             perplexity = adapters.perplexity,
         },
         strategies = {
