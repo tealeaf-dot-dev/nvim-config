@@ -58,6 +58,63 @@ M.o3minithinkingharder = function()
     })
 end
 
+M.o4mini = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "o4 mini",
+        formatted_name = "o4 mini",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "o4-mini",
+                choices = {
+                    "o4-mini",
+                },
+            },
+        },
+    })
+end
+
+M.o4minihigh = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "o4 mini high",
+        formatted_name = "o4 mini high",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "o4-mini",
+                choices = {
+                    ["o4-mini"] = { opts = { can_reason = true } },
+                },
+            },
+            reasoning_effort = {
+                default = "high",
+            },
+        },
+    })
+end
+
+M.gpt41 = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT 4.1",
+        formatted_name = "GPT 4.1",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-4.1",
+                choices = {
+                    "gpt-4.1",
+                },
+            },
+        },
+    })
+end
+
 M.gpt45 = function()
     return require("codecompanion.adapters").extend("openai", {
         name = "ChatGPT 4.5",
