@@ -1,10 +1,10 @@
 local api_keys = require("plugins.config.codecompanion.api-keys")
 local M = {}
 
-M.o3mini = function()
+M.o3minilow = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "o3 mini",
-        formatted_name = "o3 mini",
+        name = "o3 mini low",
+        formatted_name = "o3 mini low",
         env = {
             api_key = api_keys.openai,
         },
@@ -19,10 +19,10 @@ M.o3mini = function()
     })
 end
 
-M.o3minithinking = function()
+M.o3minimedium = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "o3 mini (thinking)",
-        formatted_name = "o3 mini (thinking)",
+        name = "o3 mini medium",
+        formatted_name = "o3 mini medium",
         env = {
             api_key = api_keys.openai,
         },
@@ -37,10 +37,10 @@ M.o3minithinking = function()
     })
 end
 
-M.o3minithinkingharder = function()
+M.o3minihigh = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "o3 mini (thinking harder)",
-        formatted_name = "o3 mini (thinking harder)",
+        name = "o3 mini high",
+        formatted_name = "o3 mini high",
         env = {
             api_key = api_keys.openai,
         },
@@ -135,8 +135,8 @@ end
 
 M.gpt45 = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "ChatGPT 4.5",
-        formatted_name = "ChatGPT 4.5",
+        name = "GPT 4.5",
+        formatted_name = "GPT 4.5",
         env = {
             api_key = api_keys.openai,
         },
@@ -153,8 +153,8 @@ end
 
 M.gpt4o = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "ChatGPT 4o",
-        formatted_name = "ChatGPT 4o",
+        name = "GPT 4o",
+        formatted_name = "GPT 4o",
         env = {
             api_key = api_keys.openai,
         },
