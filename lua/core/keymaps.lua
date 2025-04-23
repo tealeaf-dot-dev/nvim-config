@@ -178,7 +178,7 @@ function M.setup()
     map("n", "<leader>gs", "<cmd>Telescope git_stash<cr>", "Stash")
 
     -- Diff buffer
-    map("n", "<leader>gdb", "<cmd>Gdiff<CR>", "Buffer")
+    map("n", "<leader>gdb", "<cmd>Gvdiffsplit<CR>", "Buffer")
 
     -- Diff project (Telescope)
     map("n", "<leader>gdpt", "<cmd>Telescope git_status<cr>", "Telescope (for overview)")
