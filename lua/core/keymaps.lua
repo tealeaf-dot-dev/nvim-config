@@ -221,13 +221,13 @@ function M.setup()
     map({ "n", "v" }, "<leader>aca", "<cmd>CodeCompanionActions<CR>", "Actions")
 
     -- CodeCompanion chat
-    map({ "n", "v" }, "<leader>acc", "<cmd>CodeCompanionChat<CR>Go@full_stack_dev<CR><CR><ESC>", "Chat")
+    map({ "n", "v" }, "<leader>acc", "<cmd>CodeCompanionChat<CR>", "Chat")
 
     -- CodeCompanion prompt
     map({ "n", "v" }, "<leader>aci", feedkeys(":CodeCompanion "), "Inline")
 
     -- CodeCompanion quick chat
-    map({ "n", "v" }, "<leader>acq", feedkeys(":CodeCompanionChat @full_stack_dev "), "Quick Chat")
+    map({ "n", "v" }, "<leader>acq", feedkeys(":CodeCompanionChat "), "Quick Chat")
 
     -- CodeCompanion toggle chat
     map({ "n", "v" }, "<leader>act", "<cmd>CodeCompanionChat Toggle<CR>", "Toggle Chat")
