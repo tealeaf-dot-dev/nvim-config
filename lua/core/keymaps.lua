@@ -148,13 +148,13 @@ function M.setup()
     map("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", "Branches")
 
     -- Buffer commits
-    map("n", "<leader>gcb", "<cmd>Telescope git_bcommits<cr>", "Buffer")
+    map("n", "<leader>gcb", "<cmd>FzfLua git_bcommits<cr>", "Buffer")
 
     -- Create commit
     map("n", "<leader>gcc", "<cmd>Git commit<cr>", "Create")
 
     -- Project commits
-    map("n", "<leader>gcp", "<cmd>Telescope git_commits<cr>", "Project")
+    map("n", "<leader>gcp", "<cmd>FzfLua git_commits<cr>", "Project")
 
     -- Files
     map("n", "<leader>gf", "<cmd>Telescope git_files<cr>", "Files")
