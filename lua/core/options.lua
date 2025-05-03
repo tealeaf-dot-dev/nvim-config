@@ -158,6 +158,12 @@ function M.setup()
     -- Open a live preview of substitution commands in a split
     opt.inccommand = "split"
 
+    -- Enable spell check
+    opt.spell = true
+
+    -- Set spell check language
+    opt.spelllang = { "en_us" }
+
 
 
     -- ---------- FILETYPES ----------
