@@ -123,11 +123,18 @@ return {
     -- -------- COMPLETION --------
 
     {
-        "echasnovski/mini.completion",
-        version = false,
-        config = function()
-            require("plugins.config.mini-completion")()
+        'hrsh7th/nvim-cmp',
+        event = "VeryLazy",
+        init = function()
+            require("plugins.config.nvim-cmp")()
         end,
+        dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'quangnguyen30192/cmp-nvim-ultisnips',
+        },
     },
 
 
