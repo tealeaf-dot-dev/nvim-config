@@ -64,7 +64,7 @@ You now have access to specialized tools that empower you to assist users with s
                     ["file"] = {
                         -- Location to the slash command in CodeCompanion
                         callback = "strategies.chat.slash_commands.file",
-                        description = "Select a file using FZF",
+                        description = "Select a file",
                         opts = {
                             provider = "fzf_lua", -- Other options include 'default', 'mini_pick', 'telescope', snacks
                             contains_code = true,
@@ -73,7 +73,7 @@ You now have access to specialized tools that empower you to assist users with s
                     ["buffer"] = {
                         -- Location to the slash command in CodeCompanion
                         callback = "strategies.chat.slash_commands.buffer",
-                        description = "Select a buffer using FZF",
+                        description = "Select a buffer",
                         opts = {
                             provider = "fzf_lua", -- Other options include 'default', 'mini_pick', 'telescope', snacks
                             contains_code = true,
@@ -82,7 +82,7 @@ You now have access to specialized tools that empower you to assist users with s
                     ["help"] = {
                         -- Location to the slash command in CodeCompanion
                         callback = "strategies.chat.slash_commands.help",
-                        description = "Select help using FZF",
+                        description = "Select help",
                         opts = {
                             provider = "fzf_lua", -- Other options include 'default', 'mini_pick', 'telescope', snacks
                             contains_code = true,
