@@ -1,4 +1,6 @@
 local opt = vim.opt
+local opt_local = vim.opt_local
+local api = vim.api
 local g = vim.g
 local M = {}
 
@@ -158,8 +160,14 @@ function M.setup()
     -- Open a live preview of substitution commands in a split
     opt.inccommand = "split"
 
-    -- Enable spell check
-    opt.spell = true
+    -- Disable spell checking by default
+    opt.spell = false
+
+    -- Enable spell checking for specific file types
+    api.nvim_create_autocmd("FileType", {
+        pattern = { "markdown", "text", "gitcommit" },
+        callback = function() opt_local.spell = true end,
+    })
 
     -- Set spell check language
     opt.spelllang = { "en_us" }
