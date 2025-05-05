@@ -1,6 +1,7 @@
 local opt = vim.opt
 local opt_local = vim.opt_local
 local api = vim.api
+local cmd = vim.cmd
 local g = vim.g
 local M = {}
 
@@ -31,7 +32,7 @@ function M.setup()
     -- ---------- SYNTAX ----------
 
     -- Enable syntax highlighting
-    vim.cmd("syntax enable")
+    cmd("syntax enable")
 
     -- Enhance syntax highlighting for dark backgrounds
     opt.background = "dark"
@@ -155,7 +156,7 @@ function M.setup()
     opt.splitbelow = true
 
     -- Treat hyphenated words as one unit
-    vim.cmd("set iskeyword+=-")
+    cmd("set iskeyword+=-")
 
     -- Open a live preview of substitution commands in a split
     opt.inccommand = "split"
@@ -177,7 +178,7 @@ function M.setup()
     -- ---------- FILETYPES ----------
 
     -- Enable filetype-based behavior
-    vim.cmd("filetype plugin indent on")
+    cmd("filetype plugin indent on")
 
 
 
@@ -190,7 +191,7 @@ function M.setup()
 
 
     -- ---------- COLOR SCHEME ----------
-    vim.cmd("colorscheme gruvbox")
+    cmd("colorscheme gruvbox")
 end
 
 return M
