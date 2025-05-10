@@ -263,6 +263,9 @@ function M.setup()
 
     -- Open neo-tree
     map({"n", "v"}, "<leader>x", "<cmd>Neotree<cr>", "Open neo-tree")
+
+    -- Close neo-tree
+    map({"n", "v"}, "<leader>X", "<cmd>Neotree close<cr>", "Open neo-tree")
 end
 
 return M
