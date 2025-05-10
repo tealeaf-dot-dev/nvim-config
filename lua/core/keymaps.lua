@@ -256,6 +256,13 @@ function M.setup()
 
     -- Find man page
     map("n", "<leader>fm", "<cmd>Telescope man_pages<cr>", "Man pages")
+
+
+
+    -- -------- FILES --------
+
+    -- Open neo-tree
+    map({"n", "v"}, "<leader>x", "<cmd>Neotree<cr>", "Open neo-tree")
 end
 
 return M
