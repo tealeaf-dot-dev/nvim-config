@@ -54,22 +54,22 @@ function M.setup()
     map("n", "<leader>fp", "<cmd>Telescope live_grep<cr>", "Pattern" )
 
     -- Hop forward to word
-    map({"n", "v"}, "<space>w", "<cmd>HopWordAC<cr>", "Files")
+    map({"n", "v"}, "<space>w", "<cmd>HopWordAC<cr>", "Word (forward)")
 
     -- Hop backward to word
-    map({"n", "v"}, "<space>b", "<cmd>HopWordBC<cr>", "Files")
+    map({"n", "v"}, "<space>b", "<cmd>HopWordBC<cr>", "Word (backward)")
 
     -- Hop down to line
-    map({"n", "v"}, "<space>j", "<cmd>HopLineAC<cr>", "Files")
+    map({"n", "v"}, "<space>j", "<cmd>HopLineAC<cr>", "Line (forward)")
 
     -- Hop up to line
-    map({"n", "v"}, "<space>k", "<cmd>HopLineBC<cr>", "Files")
+    map({"n", "v"}, "<space>k", "<cmd>HopLineBC<cr>", "Line (backward)")
 
     -- Hop forward to character
-    map({"n", "v"}, "<space>f", "<cmd>HopChar1AC<cr>", "Files")
+    map({"n", "v"}, "<space>f", "<cmd>HopChar1AC<cr>", "Character (forward)")
 
     -- Hop backward to character
-    map({"n", "v"}, "<space>F", "<cmd>HopChar1BC<cr>", "Files")
+    map({"n", "v"}, "<space>F", "<cmd>HopChar1BC<cr>", "Character (backward)")
 
 
 

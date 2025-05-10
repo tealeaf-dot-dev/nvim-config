@@ -40,5 +40,6 @@ return function()
         { "<leader>is", group = "Symbol", mode = { "n", "v" } },
         { "<leader>isr", group = "References", mode = { "n", "v" } },
         { "<leader>l", group = "Local window", mode = { "n", "v" } },
+        { "<space>", group = "Hop to", mode = { "n", "v" } },
     })
 end
