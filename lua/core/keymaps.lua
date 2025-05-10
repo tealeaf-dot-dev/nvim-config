@@ -53,11 +53,23 @@ function M.setup()
     -- Find pattern
     map("n", "<leader>fp", "<cmd>Telescope live_grep<cr>", "Pattern" )
 
-    -- Leap forward
-    map({'n', 'x', 'o'}, '}',  '<Plug>(leap-forward)', "Leap forward")
+    -- Hop forward to word
+    map({"n", "v"}, "<space>w", "<cmd>HopWordAC<cr>", "Files")
 
-    -- Leap backward
-    map({'n', 'x', 'o'}, '{',  '<Plug>(leap-backward)', "Leap backward")
+    -- Hop backward to word
+    map({"n", "v"}, "<space>b", "<cmd>HopWordBC<cr>", "Files")
+
+    -- Hop down to line
+    map({"n", "v"}, "<space>j", "<cmd>HopLineAC<cr>", "Files")
+
+    -- Hop up to line
+    map({"n", "v"}, "<space>k", "<cmd>HopLineBC<cr>", "Files")
+
+    -- Hop forward to character
+    map({"n", "v"}, "<space>f", "<cmd>HopChar1AC<cr>", "Files")
+
+    -- Hop backward to character
+    map({"n", "v"}, "<space>F", "<cmd>HopChar1BC<cr>", "Files")
 
 
 

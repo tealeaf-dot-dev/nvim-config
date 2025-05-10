@@ -212,11 +212,6 @@ return {
     -- -------- NAVIGATION --------
 
     {
-        "ggandor/leap.nvim",
-        event = "VeryLazy",
-    },
-
-    {
         "christoomey/vim-tmux-navigator",
         cmd = {
             "TmuxNavigateLeft",
@@ -233,6 +228,14 @@ return {
             { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
             { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
         },
+    },
+
+    {
+        'smoka7/hop.nvim',
+        version = "*",
+        opts = {
+            keys = 'etovxqpdygfblzhckisuran'
+        }
     },
 
 
