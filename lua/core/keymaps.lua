@@ -35,6 +35,9 @@ function M.setup()
     -- Close window
     map("n", "<leader>q", ":q<CR>", "Close window")
 
+    -- Close noice floating windows
+    map("n", "<leader>nq", "<cmd>Noice dismiss<cr>", "Close noice floating windows")
+
     -- Switch buffer
     map({ "n", "v" }, "<TAB>", "<cmd>Telescope buffers<cr>", "Switch buffer")
 
