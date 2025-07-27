@@ -273,6 +273,26 @@ M.openrouter_gemini25pro = function()
     })
 end
 
+M.openrouter_grok4 = function()
+    return require("codecompanion.adapters").extend("openai_compatible", {
+        name = "Grok 4",
+        formatted_name = "Grok 4",
+        env = {
+            url = "https://openrouter.ai/api",
+            api_key = api_keys.openrouter,
+            chat_url = "/v1/chat/completions",
+        },
+        schema = {
+            model = {
+                default = "x-ai/grok-4",
+                choices = {
+                    "x-ai/grok-4",
+                },
+            },
+        },
+    })
+end
+
 M.perplexity = function()
     return require("codecompanion.adapters").extend("openai_compatible", {
         name = "Perplexity",

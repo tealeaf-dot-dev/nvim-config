@@ -20,6 +20,7 @@ return function()
             gpt41 = adapters.gpt41,
             gpt45 = adapters.gpt45,
             gpt4o = adapters.gpt4o,
+            grok4 = adapters.openrouter_grok4,
             hyperbolicdeepseekr1 = adapters.hyperbolicdeepseekr1,
             o3mini = adapters.o3mini,
             o3minimedium = adapters.o3minimedium,
