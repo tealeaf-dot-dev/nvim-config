@@ -293,6 +293,26 @@ M.openrouter_grok4 = function()
     })
 end
 
+M.openrouter_o3pro = function()
+    return require("codecompanion.adapters").extend("openai_compatible", {
+        name = "o3 Pro",
+        formatted_name = "o3 Pro",
+        env = {
+            url = "https://openrouter.ai/api",
+            api_key = api_keys.openrouter,
+            chat_url = "/v1/chat/completions",
+        },
+        schema = {
+            model = {
+                default = "openai/o3-pro",
+                choices = {
+                    "openai/o3-pro",
+                },
+            },
+        },
+    })
+end
+
 M.perplexity = function()
     return require("codecompanion.adapters").extend("openai_compatible", {
         name = "Perplexity",

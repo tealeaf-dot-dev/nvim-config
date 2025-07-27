@@ -26,6 +26,7 @@ return function()
             o3minimedium = adapters.o3minimedium,
             o3minihigh = adapters.o3minihigh,
             o3 = adapters.o3,
+            openrouter_o3pro = adapters.openrouter_o3pro,
             o4mini = adapters.o4mini,
             o4minihigh = adapters.o4minihigh,
             openrouter_gemini25pro = adapters.openrouter_gemini25pro,
