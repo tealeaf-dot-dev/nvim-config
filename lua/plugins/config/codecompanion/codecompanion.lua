@@ -1,7 +1,7 @@
 -- plugins/config/codecompanion.lua
 
 local adapters = require("plugins.config.codecompanion.adapters")
-local system_prompt = require("plugins.config.codecompanion.system-prompts.codecompanion-plus-claude-plus-cursor-tools")
+local system_prompt = require("plugins.config.codecompanion.system-prompts.code-companion")
 
 return function()
     require("codecompanion").setup({
