@@ -1,3 +1,6 @@
+-- Load secrets from:
+-- ~/.config/nvim/lua/secrets.lua
+
 local api_keys = {
     openai = "",
     anthropic = "",

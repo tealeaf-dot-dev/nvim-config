@@ -6,31 +6,37 @@ local system_prompt = require("plugins.config.codecompanion.system-prompts.code-
 return function()
     require("codecompanion").setup({
         opts = {
-            log_level = "TRACE", -- "TRACE" or "DEBUG"
+            log_level = "DEBUG", -- "TRACE" or "DEBUG"
             system_prompt = function(opts)
                 local language = opts.language or "English"
                 return string.format(system_prompt, language)
             end,
         },
         adapters = {
-            claude35 = adapters.claude35,
-            claude37 = adapters.claude37,
-            claude37thinking = adapters.claude37thinking,
-            deepseek = adapters.deepseek,
-            gpt41 = adapters.gpt41,
-            gpt45 = adapters.gpt45,
-            gpt4o = adapters.gpt4o,
-            grok4 = adapters.openrouter_grok4,
-            hyperbolicdeepseekr1 = adapters.hyperbolicdeepseekr1,
-            o3mini = adapters.o3mini,
-            o3minimedium = adapters.o3minimedium,
-            o3minihigh = adapters.o3minihigh,
-            o3 = adapters.o3,
-            openrouter_o3pro = adapters.openrouter_o3pro,
-            o4mini = adapters.o4mini,
-            o4minihigh = adapters.o4minihigh,
-            openrouter_gemini25pro = adapters.openrouter_gemini25pro,
-            perplexity = adapters.perplexity,
+            http = {
+                opts = {
+                    show_defaults = false,
+                },
+                claudesonnet4 = adapters.claudesonnet4,
+                claudeopus41 = adapters.claudeopus41,
+                gpt41 = adapters.gpt41,
+                gpt5high = adapters.gpt5high,
+                gpt5medium = adapters.gpt5medium,
+                gpt5low = adapters.gpt5low,
+                gpt5minimal = adapters.gpt5minimal,
+                gpt5minihigh = adapters.gpt5minihigh,
+                gpt5minimedium = adapters.gpt5minimedium,
+                gpt5minilow = adapters.gpt5minilow,
+                gpt5miniminimal = adapters.gpt5miniminimal,
+                gpt5nanohigh = adapters.gpt5nanohigh,
+                gpt5nanomedium = adapters.gpt5nanomedium,
+                gpt5nanolow = adapters.gpt5nanolow,
+                gpt5nanominimal = adapters.gpt5nanominimal,
+                grok4 = adapters.openrouter_grok4,
+                openrouter_o3pro = adapters.openrouter_o3pro,
+                openrouter_gemini25pro = adapters.openrouter_gemini25pro,
+                perplexity = adapters.perplexity,
+            },
         },
         strategies = {
             chat = {

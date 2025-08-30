@@ -1,55 +1,16 @@
 local api_keys = require("plugins.config.codecompanion.api-keys")
 local M = {}
 
-M.o3minilow = function()
+M.gpt5high = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "o3 mini low",
-        formatted_name = "o3 mini low",
+        name = "GPT-5 (high)",
+        formatted_name = "GPT-5 (high)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "o3-mini",
-                choices = {
-                    "o3-mini",
-                },
-            },
-        },
-    })
-end
-
-M.o3minimedium = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "o3 mini medium",
-        formatted_name = "o3 mini medium",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "o3-mini",
-                choices = {
-                    ["o3-mini"] = { opts = { can_reason = true } },
-                },
-            },
-        },
-    })
-end
-
-M.o3minihigh = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "o3 mini high",
-        formatted_name = "o3 mini high",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "o3-mini",
-                choices = {
-                    ["o3-mini"] = { opts = { can_reason = true } },
-                },
+                default = "gpt-5",
             },
             reasoning_effort = {
                 default = "high",
@@ -58,58 +19,199 @@ M.o3minihigh = function()
     })
 end
 
-M.o3 = function()
+M.gpt5medium = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "o3",
-        formatted_name = "o3",
+        name = "GPT-5 (medium)",
+        formatted_name = "GPT-5 (medium)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "o3",
-                choices = {
-                    "o3",
-                },
+                default = "gpt-5",
+            },
+            reasoning_effort = {
+                default = "medium",
             },
         },
     })
 end
 
-M.o4mini = function()
+M.gpt5low = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "o4 mini",
-        formatted_name = "o4 mini",
+        name = "GPT-5 (low)",
+        formatted_name = "GPT-5 (low)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "o4-mini",
-                choices = {
-                    "o4-mini",
-                },
+                default = "gpt-5",
+            },
+            reasoning_effort = {
+                default = "low",
             },
         },
     })
 end
 
-M.o4minihigh = function()
+M.gpt5minimal = function()
     return require("codecompanion.adapters").extend("openai", {
-        name = "o4 mini high",
-        formatted_name = "o4 mini high",
+        name = "GPT-5 (minimal)",
+        formatted_name = "GPT-5 (minimal)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "o4-mini",
-                choices = {
-                    ["o4-mini"] = { opts = { can_reason = true } },
-                },
+                default = "gpt-5",
+            },
+            reasoning_effort = {
+                default = "minimal",
+            },
+        },
+    })
+end
+
+M.gpt5minihigh = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Mini (high)",
+        formatted_name = "GPT-5 Mini (high)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-mini",
             },
             reasoning_effort = {
                 default = "high",
+            },
+        },
+    })
+end
+
+M.gpt5minimedium = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Mini (medium)",
+        formatted_name = "GPT-5 Mini (medium)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-mini",
+            },
+            reasoning_effort = {
+                default = "medium",
+            },
+        },
+    })
+end
+
+M.gpt5minilow = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Mini (low)",
+        formatted_name = "GPT-5 Mini (low)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-mini",
+            },
+            reasoning_effort = {
+                default = "low",
+            },
+        },
+    })
+end
+
+M.gpt5miniminimal = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Mini (minimal)",
+        formatted_name = "GPT-5 Mini (minimal)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-mini",
+            },
+            reasoning_effort = {
+                default = "minimal",
+            },
+        },
+    })
+end
+
+M.gpt5nanohigh = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Nano (high)",
+        formatted_name = "GPT-5 Nano (high)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-nano",
+            },
+            reasoning_effort = {
+                default = "high",
+            },
+        },
+    })
+end
+
+M.gpt5nanomedium = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Nano (medium)",
+        formatted_name = "GPT-5 Nano (medium)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-nano",
+            },
+            reasoning_effort = {
+                default = "medium",
+            },
+        },
+    })
+end
+
+M.gpt5nanolow = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Nano (low)",
+        formatted_name = "GPT-5 Nano (low)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-nano",
+            },
+            reasoning_effort = {
+                default = "low",
+            },
+        },
+    })
+end
+
+M.gpt5nanominimal = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "GPT-5 Nano (minimal)",
+        formatted_name = "GPT-5 Nano (minimal)",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5-nano",
+            },
+            reasoning_effort = {
+                default = "minimal",
             },
         },
     })
@@ -133,121 +235,31 @@ M.gpt41 = function()
     })
 end
 
-M.gpt45 = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT 4.5",
-        formatted_name = "GPT 4.5",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-4.5-preview",
-                choices = {
-                    "gpt-4.5-preview",
-                },
-            },
-        },
-    })
-end
-
-M.gpt4o = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT 4o",
-        formatted_name = "GPT 4o",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-4o",
-                choices = {
-                    "gpt-4o",
-                },
-            },
-        },
-    })
-end
-
-M.claude35 = function()
+M.claudesonnet4 = function()
     return require("codecompanion.adapters").extend("anthropic", {
-        name = "Claude 3.5",
-        formatted_name = "Claude 3.5",
+        name = "Claude Sonnet 4",
+        formatted_name = "Claude Sonnet 4",
         env = {
             api_key = api_keys.anthropic,
         },
         schema = {
             model = {
-                default = "claude-3-5-sonnet-latest",
-                choices = {
-                    "claude-3-5-sonnet-latest",
-                },
+                default = "claude-sonnet-4-20250514",
             },
         },
     })
 end
 
-M.claude37 = function()
+M.claudeopus41 = function()
     return require("codecompanion.adapters").extend("anthropic", {
-        name = "Claude 3.7",
-        formatted_name = "Claude 3.7",
+        name = "Claude Opus 4.1",
+        formatted_name = "Claude Opus 4.1",
         env = {
             api_key = api_keys.anthropic,
         },
         schema = {
             model = {
-                default = "claude-3-7-sonnet-latest",
-                choices = {
-                    "claude-3-7-sonnet-latest",
-                },
-            },
-        },
-    })
-end
-
-M.claude37thinking = function()
-    return require("codecompanion.adapters").extend("anthropic", {
-        name = "Claude 3.7 (thinking)",
-        formatted_name = "Claude 3.7 (thinking)",
-        env = {
-            api_key = api_keys.anthropic,
-        },
-        schema = {
-            model = {
-                default = "claude-3-7-sonnet-latest",
-                choices = {
-                    ["claude-3-7-sonnet-latest"] = { opts = { can_reason = true } },
-                },
-            },
-        },
-    })
-end
-
-M.deepseek = function()
-    return require("codecompanion.adapters").extend("deepseek", {
-        name = "Deepseek",
-        formatted_name = "Deepseek",
-        env = {
-            api_key = api_keys.deepseek,
-        },
-    })
-end
-
-M.hyperbolicdeepseekr1 = function()
-    return require("codecompanion.adapters").extend("openai_compatible", {
-        name = "Deepseek (hyperbolic)",
-        formatted_name = "Deepseek (hyperbolic)",
-        env = {
-            url = "https://api.hyperbolic.xyz/v1",
-            chat_url = "/chat/completions",
-            api_key = api_keys.hyperbolic,
-        },
-        schema = {
-            model = {
-                default = "deepseek-ai/DeepSeek-R1",
-                choices = {
-                    "deepseek-ai/DeepSeek-R1",
-                },
+                default = "claude-opus-4-1-20250805",
             },
         },
     })
@@ -264,10 +276,7 @@ M.openrouter_gemini25pro = function()
         },
         schema = {
             model = {
-                default = "google/gemini-2.5-pro-preview-03-25",
-                choices = {
-                    "google/gemini-2.5-pro-preview-03-25",
-                },
+                default = "google/gemini-2.5-pro",
             },
         },
     })
@@ -285,9 +294,6 @@ M.openrouter_grok4 = function()
         schema = {
             model = {
                 default = "x-ai/grok-4",
-                choices = {
-                    "x-ai/grok-4",
-                },
             },
         },
     })
@@ -305,9 +311,6 @@ M.openrouter_o3pro = function()
         schema = {
             model = {
                 default = "openai/o3-pro",
-                choices = {
-                    "openai/o3-pro",
-                },
             },
         },
     })
@@ -325,9 +328,6 @@ M.perplexity = function()
         schema = {
             model = {
                 default = "sonar-pro",
-                choices = {
-                    "sonar-pro",
-                },
             },
         },
     })

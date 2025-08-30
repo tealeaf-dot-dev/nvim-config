@@ -1,4 +1,4 @@
--- ~/.config/nvim/lua/user/secrets.lua
+-- ~/.config/nvim/lua/secrets-example.lua
 
 -- Example secrets file
 -- To use, and copy or rename to secrets.lua
