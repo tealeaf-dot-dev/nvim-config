@@ -304,4 +304,23 @@ return {
         },
         lazy = false,
     },
+
+
+
+    -- -------- IMAGES --------
+    {
+        "HakonHarnes/img-clip.nvim",
+        opts = {
+            filetypes = {
+                codecompanion = {
+                    prompt_for_file_name = false,
+                    template = "[Image]($FILE_PATH)",
+                    dir_path = "/home/ren/Downloads",
+                    use_absolute_path = true,
+                    relative_to_current_file = false,
+                    relative_template_path = false,
+                },
+            },
+        },
+    },
 }
