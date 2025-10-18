@@ -18,6 +18,13 @@ return {
     },
 
     {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
+    {
         "zanloy/vim-colors-sunburst",
     },
 
@@ -279,6 +286,12 @@ return {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
         },
+    },
+
+    {
+        "coder/claudecode.nvim",
+        dependencies = { "folke/snacks.nvim" },
+        config = true,
     },
 
 

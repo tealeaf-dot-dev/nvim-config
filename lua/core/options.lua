@@ -191,7 +191,7 @@ function M.setup()
 
 
     -- ---------- COLOR SCHEME ----------
-    cmd("colorscheme gruvbox")
+    cmd("colorscheme tokyonight-moon")
 end
 
 return M
