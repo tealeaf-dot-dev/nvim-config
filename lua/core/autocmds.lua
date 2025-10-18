@@ -31,10 +31,10 @@ function M.setup()
 
     -- Highlight on yank
     vim.api.nvim_create_autocmd("TextYankPost", {
-      group = augroup("highlight_yank"),
-      callback = function()
-        (vim.hl or vim.highlight).on_yank()
-      end,
+        group = augroup("highlight_yank"),
+        callback = function()
+            (vim.hl or vim.highlight).on_yank()
+        end,
     })
 
     -- Auto create dir when saving a file, in case some intermediate directory does not exist
