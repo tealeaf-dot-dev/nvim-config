@@ -75,23 +75,23 @@ return function()
     -- Set up lspconfig.
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    require('lspconfig')['eslint'].setup {
+    vim.lsp.config('eslint', {
         capabilities = capabilities
-    }
+    })
 
-    require('lspconfig')['lua_ls'].setup {
+    vim.lsp.config('lua_ls', {
         capabilities = capabilities
-    }
+    })
 
-    require('lspconfig')['pyright'].setup {
+    vim.lsp.config('pyright', {
         capabilities = capabilities
-    }
+    })
 
-    require('lspconfig')['twiggy_language_server'].setup {
+    vim.lsp.config('twiggy_language_server', {
         capabilities = capabilities
-    }
+    })
 
-    require('lspconfig')['ts_ls'].setup {
+    vim.lsp.config('ts_ls', {
         capabilities = capabilities
-    }
+    })
 end
