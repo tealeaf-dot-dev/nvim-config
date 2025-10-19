@@ -39,22 +39,25 @@ function M.setup()
     map("n", "<leader>nq", "<cmd>Noice dismiss<cr>", "Close noice floating windows")
 
     -- Switch buffer
-    map({ "n", "v" }, "<TAB>", "<cmd>Telescope buffers<cr>", "Switch buffer")
+    map({ "n", "v" }, "<TAB>", function() Snacks.picker.buffers() end, "Switch buffer")
 
     -- Search project
     map("n", "<leader>r", "<cmd>FzfLua grep_project<cr>", "Search project")
 
     -- Search buffer
-    map("n", "<leader>s", "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search buffer")
+    map("n", "<leader>s", function() Snacks.picker.lines() end, "Search buffer")
+
+    -- Search buffers
+    map("n", "<leader>S", function() Snacks.picker.grep_buffers() end, "Search buffers")
 
     -- Find file
-    map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", "Files" )
+    map("n", "<leader>ff", function() Snacks.picker.files() end, "Files")
 
     -- Find file in project
-    map("n", "<leader>p", "<cmd>Telescope git_files<cr>", "Files")
+    map("n", "<leader>p", function() Snacks.picker.git_files() end, "Project Files")
 
     -- Find pattern
-    map("n", "<leader>fp", "<cmd>Telescope live_grep<cr>", "Pattern" )
+    map("n", "<leader>fp", function() Snacks.picker.grep() end, "Pattern" )
 
     -- Hop forward to word
     map({"n", "v"}, "<space>w", "<cmd>HopWordAC<cr>", "Word (forward)")
@@ -91,7 +94,7 @@ function M.setup()
     map("n", "<leader>isd", vim.lsp.buf.definition, "Definition");
 
     -- LSP show references
-    map("n", "<leader>isrs", "<cmd>Telescope lsp_references<CR>", "Search");
+    map("n", "<leader>isrs", function() Snacks.picker.lsp_references() end, "Search");
     map("n", "<leader>isrq", vim.lsp.buf.references, "Quickfix");
 
     -- LSP signature help
@@ -116,7 +119,7 @@ function M.setup()
     map("n", "<leader>idla", "<cmd>Trouble diagnostics toggle<cr>", "All buffers")
 
     -- LSP search diagnostics
-    map("n", "<leader>ids", "<cmd>Telescope diagnostics<CR>", "Search")
+    map("n", "<leader>ids", function() Snacks.picker.diagnostics() end, "Search")
 
     -- LSP jump to previous diagnostic
     map("n", "[d", vim.diagnostic.goto_prev, "Previous diagnostic")
@@ -160,7 +163,7 @@ function M.setup()
     map("n", "<leader>gar", "<cmd>Git restore %<CR>", "Revert buffer")
 
     -- Branches
-    map("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", "Branches")
+    map("n", "<leader>gb", function() Snacks.picker.git_branches() end, "Branches")
 
     -- Buffer commits
     map("n", "<leader>gcb", "<cmd>FzfLua git_bcommits<cr>", "Buffer")
@@ -170,9 +173,6 @@ function M.setup()
 
     -- Project commits
     map("n", "<leader>gcp", "<cmd>FzfLua git_commits<cr>", "Project")
-
-    -- Files
-    map("n", "<leader>gf", "<cmd>Telescope git_files<cr>", "Files")
 
     -- Blame buffer
     map("n", "<leader>glb", "<cmd>Git blame<CR>", "Buffer")
@@ -190,13 +190,13 @@ function M.setup()
     map("n", "<leader>grf", "<cmd>Git fetch<CR>", "Fetch")
 
     -- Stash
-    map("n", "<leader>gs", "<cmd>Telescope git_stash<cr>", "Stash")
+    map("n", "<leader>gs", function() Snacks.picker.git_stash() end, "Stash")
 
     -- Diff buffer
     map("n", "<leader>gdb", "<cmd>Gvdiffsplit<CR>", "Buffer")
 
-    -- Diff project (Telescope)
-    map("n", "<leader>gdpt", "<cmd>Telescope git_status<cr>", "Telescope (for overview)")
+    -- Diff project (Snacks)
+    map("n", "<leader>gdps", function() Snacks.picker.git_status() end, "Snacks (for overview)")
 
     -- Diff project (Diffview)
     map("n", "<leader>gdpd", ":DiffviewOpen<CR>", "Diffview (for changes)")
@@ -255,10 +255,10 @@ function M.setup()
     map("n", "<leader>~", ":cd %:p:h<CR>:pwd<CR>", "Change to the buffer working directory")
 
     -- Find key mapping
-    map("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", "Keymaps")
+    map("n", "<leader>fk", function() Snacks.picker.keymaps() end, "Keymaps")
 
     -- Find man page
-    map("n", "<leader>fm", "<cmd>Telescope man_pages<cr>", "Man pages")
+    map("n", "<leader>fm", function() Snacks.picker.man() end, "Man pages")
 
 
 

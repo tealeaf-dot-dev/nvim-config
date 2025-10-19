@@ -46,14 +46,6 @@ return {
     },
 
     {
-        "stevearc/dressing.nvim",
-        event = "VeryLazy",
-        config = function()
-            require("plugins.config.dressing")()
-        end,
-    },
-
-    {
         "rcarriga/nvim-notify",
         event = "VeryLazy",
         config = function()
@@ -106,6 +98,21 @@ return {
         "ibhagwan/fzf-lua",
         dependencies = { "echasnovski/mini.icons" },
         opts = {},
+    },
+
+    {
+        "folke/snacks.nvim",
+        ---@type snacks.Config
+        opts = {
+            picker = {
+                -- your picker configuration comes here
+                -- or leave it empty to use the default settings
+            },
+            input = {
+                -- your input configuration comes here
+                -- or leave it empty to use the default settings
+            },
+        }
     },
 
 
