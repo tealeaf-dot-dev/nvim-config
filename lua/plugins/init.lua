@@ -137,18 +137,16 @@ return {
     -- -------- COMPLETION --------
 
     {
-        'hrsh7th/nvim-cmp',
-        event = "VeryLazy",
-        init = function()
-            require("plugins.config.nvim-cmp")()
-        end,
+        "saghen/blink.cmp",
+        version = '1.*',
         dependencies = {
-            'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/cmp-path',
-            'hrsh7th/cmp-cmdline',
+            "saghen/blink.compat",
             'quangnguyen30192/cmp-nvim-ultisnips',
         },
+        event = { "InsertEnter", "CmdlineEnter" },
+        opts = require('plugins.config.blink').opts,
+        opts_extend = require('plugins.config.blink').opts_extend,
+        config = require('plugins.config.blink').config,
     },
 
 
