@@ -1,4 +1,4 @@
--- plugins/config/mason.lua
+-- plugins/config/lualine.lua
 
 return function()
     require("lualine").setup()
