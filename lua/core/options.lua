@@ -146,9 +146,6 @@ function M.setup()
     -- Highlight the current line
     opt.cursorline = true
 
-    -- Restrict line highlighting to just the row number
-    opt.cursorlineopt = "number"
-
     -- Vertical splits go to the right
     opt.splitright = true
 
