@@ -310,14 +310,11 @@ return {
 
     -- -------- FILES --------
     {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons",
-            "MunifTanjim/nui.nvim",
-        },
-        lazy = false,
+        'nvim-mini/mini.files',
+        version = false,
+        config = function()
+            require("plugins.config.mini-files")()
+        end,
     },
 
 

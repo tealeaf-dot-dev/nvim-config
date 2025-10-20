@@ -265,10 +265,7 @@ function M.setup()
     -- -------- FILES --------
 
     -- Open neo-tree
-    map({"n", "v"}, "<leader>x", "<cmd>Neotree<cr>", "Open neo-tree")
-
-    -- Close neo-tree
-    map({"n", "v"}, "<leader>X", "<cmd>Neotree close<cr>", "Open neo-tree")
+    map({"n", "v"}, "<leader>x", function() MiniFiles.open() end, "Open mini-files")
 end
 
 return M
