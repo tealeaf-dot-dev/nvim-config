@@ -181,31 +181,31 @@ M.gpt51minimal = function()
     })
 end
 
-M.claudesonnet4 = function()
+M.claudesonnet45 = function()
     return require("codecompanion.adapters").extend("anthropic", {
-        name = "Claude Sonnet 4",
-        formatted_name = "Claude Sonnet 4",
+        name = "Claude Sonnet 4.5",
+        formatted_name = "Claude Sonnet 4.5",
         env = {
             api_key = api_keys.anthropic,
         },
         schema = {
             model = {
-                default = "claude-sonnet-4-20250514",
+                default = "claude-sonnet-4-5-20250929",
             },
         },
     })
 end
 
-M.claudeopus41 = function()
+M.claudeopus45 = function()
     return require("codecompanion.adapters").extend("anthropic", {
-        name = "Claude Opus 4.1",
-        formatted_name = "Claude Opus 4.1",
+        name = "Claude Opus 4.5",
+        formatted_name = "Claude Opus 4.5",
         env = {
             api_key = api_keys.anthropic,
         },
         schema = {
             model = {
-                default = "claude-opus-4-1-20250805",
+                default = "claude-opus-4-5-20251101",
             },
         },
     })

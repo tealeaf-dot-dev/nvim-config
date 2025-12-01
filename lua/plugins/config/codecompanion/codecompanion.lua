@@ -17,8 +17,8 @@ return function()
                 opts = {
                     show_defaults = false,
                 },
-                claudesonnet4 = adapters.claudesonnet4,
-                claudeopus41 = adapters.claudeopus41,
+                claudesonnet45 = adapters.claudesonnet45,
+                claudeopus45 = adapters.claudeopus45,
                 gpt5high = adapters.gpt5high,
                 gpt51high = adapters.gpt51high,
                 gpt51medium = adapters.gpt51medium,
