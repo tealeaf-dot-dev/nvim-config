@@ -1,16 +1,16 @@
 local api_keys = require("plugins.config.codecompanion.api-keys")
 local M = {}
 
-M.gpt5high = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 (high)",
-        formatted_name = "GPT-5 (high)",
+M.gpt51codexminihigh = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 Codex Mini (high)",
+        formatted_name = "GPT-5.1 Codex Mini (high)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5",
+                default = "gpt-5.1-codex-mini",
             },
             reasoning_effort = {
                 default = "high",
@@ -19,16 +19,16 @@ M.gpt5high = function()
     })
 end
 
-M.gpt5medium = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 (medium)",
-        formatted_name = "GPT-5 (medium)",
+M.gpt51codexminimedium = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 Codex Mini (medium)",
+        formatted_name = "GPT-5.1 Codex Mini (medium)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5",
+                default = "gpt-5.1-codex-mini",
             },
             reasoning_effort = {
                 default = "medium",
@@ -37,16 +37,16 @@ M.gpt5medium = function()
     })
 end
 
-M.gpt5low = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 (low)",
-        formatted_name = "GPT-5 (low)",
+M.gpt51codexminilow = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 Codex Mini (low)",
+        formatted_name = "GPT-5.1 Codex Mini (low)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5",
+                default = "gpt-5.1-codex-mini",
             },
             reasoning_effort = {
                 default = "low",
@@ -55,34 +55,16 @@ M.gpt5low = function()
     })
 end
 
-M.gpt5minimal = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 (minimal)",
-        formatted_name = "GPT-5 (minimal)",
+M.gpt51codexhigh = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 Codex (high)",
+        formatted_name = "GPT-5.1 Codex (high)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5",
-            },
-            reasoning_effort = {
-                default = "minimal",
-            },
-        },
-    })
-end
-
-M.gpt5minihigh = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Mini (high)",
-        formatted_name = "GPT-5 Mini (high)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5-mini",
+                default = "gpt-5.1-codex",
             },
             reasoning_effort = {
                 default = "high",
@@ -91,16 +73,16 @@ M.gpt5minihigh = function()
     })
 end
 
-M.gpt5minimedium = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Mini (medium)",
-        formatted_name = "GPT-5 Mini (medium)",
+M.gpt51codexmedium = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 Codex (medium)",
+        formatted_name = "GPT-5.1 Codex (medium)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5-mini",
+                default = "gpt-5.1-codex",
             },
             reasoning_effort = {
                 default = "medium",
@@ -109,16 +91,16 @@ M.gpt5minimedium = function()
     })
 end
 
-M.gpt5minilow = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Mini (low)",
-        formatted_name = "GPT-5 Mini (low)",
+M.gpt51codexlow = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 Codex (low)",
+        formatted_name = "GPT-5.1 Codex (low)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5-mini",
+                default = "gpt-5.1-codex",
             },
             reasoning_effort = {
                 default = "low",
@@ -127,34 +109,16 @@ M.gpt5minilow = function()
     })
 end
 
-M.gpt5miniminimal = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Mini (minimal)",
-        formatted_name = "GPT-5 Mini (minimal)",
+M.gpt51high = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 (high)",
+        formatted_name = "GPT-5.1 (high)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5-mini",
-            },
-            reasoning_effort = {
-                default = "minimal",
-            },
-        },
-    })
-end
-
-M.gpt5nanohigh = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Nano (high)",
-        formatted_name = "GPT-5 Nano (high)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5-nano",
+                default = "gpt-5.1",
             },
             reasoning_effort = {
                 default = "high",
@@ -163,16 +127,16 @@ M.gpt5nanohigh = function()
     })
 end
 
-M.gpt5nanomedium = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Nano (medium)",
-        formatted_name = "GPT-5 Nano (medium)",
+M.gpt51medium = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 (medium)",
+        formatted_name = "GPT-5.1 (medium)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5-nano",
+                default = "gpt-5.1",
             },
             reasoning_effort = {
                 default = "medium",
@@ -181,16 +145,16 @@ M.gpt5nanomedium = function()
     })
 end
 
-M.gpt5nanolow = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Nano (low)",
-        formatted_name = "GPT-5 Nano (low)",
+M.gpt51low = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 (low)",
+        formatted_name = "GPT-5.1 (low)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5-nano",
+                default = "gpt-5.1",
             },
             reasoning_effort = {
                 default = "low",
@@ -199,37 +163,19 @@ M.gpt5nanolow = function()
     })
 end
 
-M.gpt5nanominimal = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT-5 Nano (minimal)",
-        formatted_name = "GPT-5 Nano (minimal)",
+M.gpt51minimal = function()
+    return require("codecompanion.adapters").extend("openai_responses", {
+        name = "GPT-5.1 (minimal)",
+        formatted_name = "GPT-5.1 (minimal)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5-nano",
+                default = "gpt-5.1",
             },
             reasoning_effort = {
                 default = "minimal",
-            },
-        },
-    })
-end
-
-M.gpt41 = function()
-    return require("codecompanion.adapters").extend("openai", {
-        name = "GPT 4.1",
-        formatted_name = "GPT 4.1",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-4.1",
-                choices = {
-                    "gpt-4.1",
-                },
             },
         },
     })

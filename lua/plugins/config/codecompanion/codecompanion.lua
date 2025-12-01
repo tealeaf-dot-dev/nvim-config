@@ -19,19 +19,17 @@ return function()
                 },
                 claudesonnet4 = adapters.claudesonnet4,
                 claudeopus41 = adapters.claudeopus41,
-                gpt41 = adapters.gpt41,
                 gpt5high = adapters.gpt5high,
-                gpt5medium = adapters.gpt5medium,
-                gpt5low = adapters.gpt5low,
-                gpt5minimal = adapters.gpt5minimal,
-                gpt5minihigh = adapters.gpt5minihigh,
-                gpt5minimedium = adapters.gpt5minimedium,
-                gpt5minilow = adapters.gpt5minilow,
-                gpt5miniminimal = adapters.gpt5miniminimal,
-                gpt5nanohigh = adapters.gpt5nanohigh,
-                gpt5nanomedium = adapters.gpt5nanomedium,
-                gpt5nanolow = adapters.gpt5nanolow,
-                gpt5nanominimal = adapters.gpt5nanominimal,
+                gpt51high = adapters.gpt51high,
+                gpt51medium = adapters.gpt51medium,
+                gpt51low = adapters.gpt51low,
+                gpt51minimal = adapters.gpt51minimal,
+                gpt51codexhigh = adapters.gpt51codexhigh,
+                gpt51codexmedium = adapters.gpt51codexmedium,
+                gpt51codexlow = adapters.gpt51codexlow,
+                gpt51codexminihigh = adapters.gpt51codexminihigh,
+                gpt51codexminimedium = adapters.gpt51codexminimedium,
+                gpt51codexminilow = adapters.gpt51codexminilow,
                 grok4 = adapters.openrouter_grok4,
                 openrouter_o3pro = adapters.openrouter_o3pro,
                 openrouter_gemini25pro = adapters.openrouter_gemini25pro,
@@ -40,7 +38,7 @@ return function()
         },
         strategies = {
             chat = {
-                adapter = "gpt41",
+                adapter = "gpt51codexmedium",
                 roles = {
                     llm = function(adapter)
                         return adapter.formatted_name
@@ -99,7 +97,7 @@ You now have access to specialized tools that empower you to assist users with s
                 },
             },
             inline = {
-                adapter = "gpt41",
+                adapter = "gpt51codexmedium",
             },
         },
     })
