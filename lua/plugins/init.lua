@@ -149,6 +149,10 @@ return {
         config = require('plugins.config.blink').config,
     },
 
+    {
+        "mfussenegger/nvim-dap",
+    },
+
 
 
     -- -------- GENERAL CODING --------
@@ -192,6 +196,12 @@ return {
     {
         "ledger/vim-ledger",
         event = "VeryLazy",
+    },
+
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^6', -- Recommended
+        lazy = false, -- This plugin is already lazy
     },
 
 

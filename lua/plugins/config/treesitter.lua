@@ -5,7 +5,7 @@ return function()
         ensure_installed = {
             "lua", "vimdoc", "bash", "python", "javascript", "typescript",
             "html", "css", "json", "yaml", "markdown", "markdown_inline",
-            "haskell", "tsx",
+            "haskell", "tsx", "rust",
         },
         highlight = {
             enable = true,
