@@ -40,6 +40,7 @@ return function()
                 gpt52promedium = adapters.gpt52promedium,
                 gpt52prolow = adapters.gpt52prolow,
                 gpt52pronone = adapters.gpt52pronone,
+                gpt52chat = adapters.gpt52chat,
                 grok41fast = adapters.grok41fast,
                 gemini3propreview = adapters.gemini3propreview,
                 gemini3flashpreview = adapters.gemini3flashpreview,

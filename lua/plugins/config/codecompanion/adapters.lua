@@ -751,6 +751,21 @@ M.gpt52proxhigh = function()
     })
 end
 
+M.gpt52chat = function()
+    return require("codecompanion.adapters").extend("openai", {
+        name = "gpt-5.2-chat",
+        formatted_name = "GPT-5.2 Chat",
+        env = {
+            api_key = api_keys.openai,
+        },
+        schema = {
+            model = {
+                default = "gpt-5.2-chat-latest",
+            },
+        },
+    })
+end
+
 M.claudesonnet45 = function()
     return require("codecompanion.adapters").extend("anthropic", {
         name = "claude-sonnet-4.5",
