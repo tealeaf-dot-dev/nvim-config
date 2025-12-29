@@ -11,6 +11,7 @@ return function()
             http = {
                 opts = {
                     show_defaults = false,
+                    show_presets = false,
                 },
                 claudesonnet45 = adapters.claudesonnet45,
                 claudeopus45 = adapters.claudeopus45,
