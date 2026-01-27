@@ -8,6 +8,7 @@ local api_keys = {
     hyperbolic = "",
     openrouter = "",
     perplexity = "",
+    tavily = "",
 }
 
 local ok, secrets = pcall(require, "secrets")

@@ -612,4 +612,12 @@ M.perplexity = function()
     })
 end
 
+M.tavily = function()
+    return require("codecompanion.adapters").extend("tavily", {
+        env = {
+            api_key = api_keys.tavily,
+        },
+    })
+end
+
 return M

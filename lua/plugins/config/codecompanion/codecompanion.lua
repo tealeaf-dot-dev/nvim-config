@@ -38,6 +38,7 @@ return function()
                 minimaxm21 = adapters.minimaxm21,
                 nanobananapro = adapters.nanobananapro,
                 perplexity = adapters.perplexity,
+                tavily = adapters.tavily,
             },
         },
         interactions = {
