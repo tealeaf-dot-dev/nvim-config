@@ -510,6 +510,23 @@ M.claudeopus45 = function()
     })
 end
 
+M.minimaxm21 = function()
+    return require("codecompanion.adapters").extend("openai_compatible", {
+        name = "minimax-m2.1",
+        formatted_name = "MiniMax M2.1",
+        env = {
+            url = "https://openrouter.ai/api",
+            api_key = api_keys.openrouter,
+            chat_url = "/v1/chat/completions",
+        },
+        schema = {
+            model = {
+                default = "minimax/minimax-m2.1",
+            },
+        },
+    })
+end
+
 M.gemini3propreview = function()
     return require("codecompanion.adapters").extend("openai_compatible", {
         name = "gemini-3-pro-preview",

@@ -35,6 +35,7 @@ return function()
                 grok41fast = adapters.grok41fast,
                 gemini3propreview = adapters.gemini3propreview,
                 gemini3flashpreview = adapters.gemini3flashpreview,
+                minimaxm21 = adapters.minimaxm21,
                 nanobananapro = adapters.nanobananapro,
                 perplexity = adapters.perplexity,
             },
