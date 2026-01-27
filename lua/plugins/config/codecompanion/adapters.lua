@@ -1,16 +1,16 @@
 local api_keys = require("plugins.config.codecompanion.api-keys")
 local M = {}
 
-M.gpt51codexnone = function()
+M.gpt52codexnone = function()
     return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-none",
-        formatted_name = "GPT-5.1 Codex (none)",
+        name = "gpt-5.2-codex-none",
+        formatted_name = "GPT-5.2 Codex (none)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5.1-codex",
+                default = "gpt-5.2-codex",
             },
             ["reasoning.effort"] = {
                 order = 2,
@@ -31,16 +31,16 @@ M.gpt51codexnone = function()
     })
 end
 
-M.gpt51codexlow = function()
+M.gpt52codexlow = function()
     return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-low",
-        formatted_name = "GPT-5.1 Codex (low)",
+        name = "gpt-5.2-codex-low",
+        formatted_name = "GPT-5.2 Codex (low)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5.1-codex",
+                default = "gpt-5.2-codex",
             },
             ["reasoning.effort"] = {
                 order = 2,
@@ -61,16 +61,16 @@ M.gpt51codexlow = function()
     })
 end
 
-M.gpt51codexmedium = function()
+M.gpt52codexmedium = function()
     return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-medium",
-        formatted_name = "GPT-5.1 Codex (medium)",
+        name = "gpt-5.2-codex-medium",
+        formatted_name = "GPT-5.2 Codex (medium)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5.1-codex",
+                default = "gpt-5.2-codex",
             },
             ["reasoning.effort"] = {
                 order = 2,
@@ -83,24 +83,23 @@ M.gpt51codexmedium = function()
                     "high",
                     "medium",
                     "low",
-                    "medium",
+                    "none",
                 },
-
             },
         },
     })
 end
 
-M.gpt51codexhigh = function()
+M.gpt52codexhigh = function()
     return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-high",
-        formatted_name = "GPT-5.1 Codex (high)",
+        name = "gpt-5.2-codex-high",
+        formatted_name = "GPT-5.2 Codex (high)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5.1-codex",
+                default = "gpt-5.2-codex",
             },
             ["reasoning.effort"] = {
                 order = 2,
@@ -121,316 +120,16 @@ M.gpt51codexhigh = function()
     })
 end
 
-M.gpt51codexxhigh = function()
+M.gpt52codexxhigh = function()
     return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-xhigh",
-        formatted_name = "GPT-5.1 Codex (xhigh)",
+        name = "gpt-5.2-codex-xhigh",
+        formatted_name = "GPT-5.2 Codex (xhigh)",
         env = {
             api_key = api_keys.openai,
         },
         schema = {
             model = {
-                default = "gpt-5.1-codex",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "xhigh",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexmininone = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-mini-none",
-        formatted_name = "GPT-5.1 Codex Mini (none)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-mini",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "none",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexminilow = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-mini-low",
-        formatted_name = "GPT-5.1 Codex Mini (low)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-mini",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "low",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexminimedium = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-mini-medium",
-        formatted_name = "GPT-5.1 Codex Mini (medium)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-mini",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "medium",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "medium",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexminihigh = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-mini-high",
-        formatted_name = "GPT-5.1 Codex Mini (high)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-mini",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "high",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexminixhigh = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-mini-xhigh",
-        formatted_name = "GPT-5.1 Codex Mini (xhigh)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-mini",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "xhigh",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexmaxnone = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-max-none",
-        formatted_name = "GPT-5.1 Codex Mini (none)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-max",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "none",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexmaxlow = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-max-low",
-        formatted_name = "GPT-5.1 Codex Mini (low)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-max",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "low",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexmaxmedium = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-max-medium",
-        formatted_name = "GPT-5.1 Codex Mini (medium)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-max",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "medium",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "medium",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexmaxhigh = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-max-high",
-        formatted_name = "GPT-5.1 Codex Mini (high)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-max",
-            },
-            ["reasoning.effort"] = {
-                order = 2,
-                mapping = "parameters",
-                type = "string",
-                optional = true,
-                default = "high",
-                choices = {
-                    "xhigh",
-                    "high",
-                    "medium",
-                    "low",
-                    "none",
-                },
-
-            },
-        },
-    })
-end
-
-M.gpt51codexmaxxhigh = function()
-    return require("codecompanion.adapters").extend("openai_responses", {
-        name = "gpt-5.1-codex-max-xhigh",
-        formatted_name = "GPT-5.1 Codex Mini (xhigh)",
-        env = {
-            api_key = api_keys.openai,
-        },
-        schema = {
-            model = {
-                default = "gpt-5.1-codex-max",
+                default = "gpt-5.2-codex",
             },
             ["reasoning.effort"] = {
                 order = 2,
