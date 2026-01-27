@@ -149,6 +149,9 @@ function M.setup()
     -- Remove highlighting of search matches
     map("n", "<leader>nh", ":noh<CR>", "Remove highlighting of search matches")
 
+    -- Paste image using img-clip
+    map("n", "<leader>v", "<cmd>PasteImage<cr>", "Paste image from system clipboard")
+
 
 
     -- -------- GIT --------
