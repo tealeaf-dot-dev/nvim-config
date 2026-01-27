@@ -480,6 +480,21 @@ M.claudesonnet45 = function()
     })
 end
 
+M.claudehaiku45 = function()
+    return require("codecompanion.adapters").extend("anthropic", {
+        name = "claude-haiku-4.5",
+        formatted_name = "Claude Haiku 4.5",
+        env = {
+            api_key = api_keys.anthropic,
+        },
+        schema = {
+            model = {
+                default = "claude-haiku-4-5-20251001",
+            },
+        },
+    })
+end
+
 M.claudeopus45 = function()
     return require("codecompanion.adapters").extend("anthropic", {
         name = "claude-opus-4.5",

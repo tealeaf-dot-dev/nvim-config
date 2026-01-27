@@ -13,6 +13,7 @@ return function()
                     show_defaults = false,
                     show_presets = false,
                 },
+                claudehaiku45 = adapters.claudehaiku45,
                 claudesonnet45 = adapters.claudesonnet45,
                 claudeopus45 = adapters.claudeopus45,
                 gpt52codexxhigh = adapters.gpt52codexxhigh,
