@@ -40,10 +40,10 @@ return function()
         },
         interactions = {
             chat = {
-                adapter = "gpt52codexmedium",
+                adapter = "gpt52medium",
             },
             inline = {
-                adapter = "gpt52codexmedium",
+                adapter = "gpt52medium",
             },
         },
     })
