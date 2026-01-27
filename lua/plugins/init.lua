@@ -332,6 +332,7 @@ return {
     -- -------- IMAGES --------
     {
         "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
         opts = {
             filetypes = {
                 codecompanion = {
