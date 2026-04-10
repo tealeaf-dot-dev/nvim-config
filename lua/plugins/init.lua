@@ -28,6 +28,11 @@ return {
         "zanloy/vim-colors-sunburst",
     },
 
+    {
+        "kepano/flexoki-neovim",
+        name = "flexoki"
+    },
+
 
 
     -- -------- UI --------
