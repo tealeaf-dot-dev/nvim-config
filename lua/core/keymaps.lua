@@ -3,6 +3,25 @@ local M = {}
 local map = require("utils").map
 local feedkeys = require("utils").feedkeys
 
+local function diagnostic_jump(count)
+    return function()
+        vim.diagnostic.jump({
+            count = count,
+            on_jump = function(diagnostic, bufnr)
+                if not diagnostic then
+                    return
+                end
+
+                vim.diagnostic.open_float({
+                    bufnr = bufnr,
+                    scope = "cursor",
+                    focus = false,
+                })
+            end,
+        })
+    end
+end
+
 function M.setup()
     g.mapleader = ","
 
@@ -122,10 +141,10 @@ function M.setup()
     map("n", "<leader>ids", function() Snacks.picker.diagnostics() end, "Search")
 
     -- LSP jump to previous diagnostic
-    map("n", "[d", vim.diagnostic.goto_prev, "Previous diagnostic")
+    map("n", "[d", diagnostic_jump(-1), "Previous diagnostic")
 
     -- LSP jump to next diagnostic
-    map("n", "]d", vim.diagnostic.goto_next, "Next diagnostic")
+    map("n", "]d", diagnostic_jump(1), "Next diagnostic")
 
 
 
