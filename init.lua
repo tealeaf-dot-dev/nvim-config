@@ -1,4 +1,5 @@
 require("core.bootstrap").setup()
+require("core.compat").setup()
 require("core.keymaps").setup()
 require("lazy").setup("plugins")
 require("core.options").setup()
